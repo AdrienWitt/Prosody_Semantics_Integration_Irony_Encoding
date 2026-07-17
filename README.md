@@ -54,9 +54,9 @@ resolve paths via `analysis_helpers.get_paths()`.
 
 ## Reproduce the pipeline
 
-Shared settings used in the paper: `--use_pca --pca_threshold 0.55`
-(must be identical in `encoding.py` and `permutation_test.py`), `--n_splits 5`,
-`--include_tasks irony sarcasm`, results under `results_irosar_interaction/`.
+Shared settings used in the paper: `--n_splits 5`, `--include_tasks irony sarcasm`,
+results under your own `--results_dir` — identical in `encoding.py` and
+`permutation_test.py`.
 
 ### 1. Embeddings
 ```bash
@@ -65,9 +65,9 @@ python audio_text_embeddings.py     # text_cross_attention, text_statement_only,
 
 ### 2. Encoding — one run per model (each writes its correlation map + valphas)
 ```bash
-COMMON="--use_base_features --use_pca --pca_threshold 0.55 --n_splits 5 \
+COMMON="--use_base_features --n_splits 5 \
         --optimize_alpha --include_tasks irony sarcasm \
-        --results_dir results_irosar_interaction"
+        --results_dir <your_result_dir>"
 
 # context-attention models
 python encoding.py --use_text            $COMMON --text_embedding_type cross_attention
@@ -78,13 +78,13 @@ python encoding.py --use_text --use_audio --use_interaction $COMMON --text_embed
 python encoding.py --use_text            $COMMON --text_embedding_type statement_only
 python encoding.py --use_text --use_audio --use_interaction $COMMON --text_embedding_type statement_only
 ```
-`--results_dir results_irosar_interaction` is idempotent: combined (`--use_interaction`)
+`--results_dir` is idempotent: combined (`--use_interaction`)
 runs keep the name, unimodal runs write into the same folder so every map lives together.
 
 ### 3. Permutations — null distributions (reuse the valphas from step 2)
 ```bash
-PERM="--use_base_features --use_pca --pca_threshold 0.55 --n_splits 5 \
-      --include_tasks irony sarcasm --results_dir results_irosar_interaction --n_perms 1000"
+PERM="--use_base_features --n_splits 5 \
+      --include_tasks irony sarcasm --results_dir <your_result_dir> --n_perms 1000"
 
 # whole-model nulls (both blocks shuffled): text, audio, text+audio
 python permutation_test.py --use_text --use_audio $PERM --text_embedding_type cross_attention \
@@ -104,7 +104,7 @@ Operational flags for long HPC runs are available: `--perm_start/--perm_end`
 ```bash
 python results_analyses.py          # edit the SETTINGS block at the top if needed
 ```
-Writes to `results_irosar_interaction/tables/opensmile/perm_split5_top<pct>_k<k>_conn<c>/`
+Writes to `<your_result_dir>/tables/opensmile/perm_split5_top<pct>_k<k>_conn<c>/`
 (`.xlsx` cluster tables + thresholded `.nii` per model, plus `summary.xlsx`).
 
 ### 5. Supplementary diagnostics
