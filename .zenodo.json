@@ -1,0 +1,21 @@
+{
+  "title": "Prosody × Semantics integration in irony & sarcasm — fMRI encoding",
+  "description": "Voxel-wise ridge encoding of prosodic (openSMILE eGeMAPSv02) and semantic (CamemBERTa v2) features during irony and sarcasm comprehension. Analysis code for the accompanying paper: embeddings, encoding, block-permutation nulls and cluster-level FDR.",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Wittmann, Adrien",
+      "affiliation": "University of Geneva"
+    }
+  ],
+  "keywords": [
+    "fMRI",
+    "encoding models",
+    "irony",
+    "sarcasm",
+    "prosody",
+    "semantics",
+    "ridge regression"
+  ]
+}

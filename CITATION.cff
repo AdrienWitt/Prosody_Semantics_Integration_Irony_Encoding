@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Prosody × Semantics integration in irony & sarcasm — fMRI encoding"
+abstract: >-
+  Voxel-wise ridge encoding of prosodic (openSMILE eGeMAPSv02) and semantic
+  (CamemBERTa v2) features during irony and sarcasm comprehension.
+authors:
+  - family-names: Wittmann
+    given-names: Adrien
+    affiliation: University of Geneva
+    # orcid: "https://orcid.org/0000-0000-0000-0000"   # <- ajoute ton ORCID ici
+version: 1.0.0
+date-released: 2026-07-17
+license: MIT
+repository-code: "https://github.com/AdrienWitt/Prosody_Semantics_Integration_Irony_Encoding"
+keywords:
+  - fMRI
+  - encoding models
+  - irony
+  - sarcasm
+  - prosody
+  - semantics
