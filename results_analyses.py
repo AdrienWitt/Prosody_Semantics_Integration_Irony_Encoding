@@ -11,7 +11,7 @@ from statsmodels.stats.multitest import fdrcorrection
 # ================================
 # SETTINGS — only change this block
 # ================================
-RESULTS_DIR      = "results_irosar_interaction"
+RESULTS_DIR      = "your_result_dir"
 MIN_CLUSTER_SIZE = 10     # manuscript tables/figures use k≥10 (perm_split5_top99_k10_conn3)
 FDR_ALPHA        = 0.05
 TOP_PERCENTILE   = 99     # percentile computed on POSITIVE voxels only (directional test)

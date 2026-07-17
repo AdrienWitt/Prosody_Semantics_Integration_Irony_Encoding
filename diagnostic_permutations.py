@@ -27,7 +27,7 @@ from statsmodels.stats.multitest import fdrcorrection
 # ================================
 # Settings
 # ================================
-RESULTS_DIR = "results_irosar_interaction"
+RESULTS_DIR = "your_result_dir"
 EMB_PRIMARY = "cross_attention"
 EMB_COMPARE = "statement_only"
 N_SPLITS    = 5
