@@ -1,0 +1,42 @@
+# Data and embeddings (too large for git)
+data/
+embeddings/
+results*/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Norton
+_norton/
+
+# Archived / superseded scripts (kept on disk, out of the clean repo)
+old_scripts/
+
+*png

@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+nibabel
+nilearn
+joblib
+torch
+scipy
+statsmodels
+matplotlib
+openpyxl
+transformers
+torchaudio
+opensmile
