@@ -5,8 +5,8 @@ features during irony/sarcasm comprehension. This repository is the minimal,
 documented set of scripts needed to reproduce the analyses reported in the paper.
 
 The models it covers are those reported in the paper: **openSMILE** (eGeMAPSv02)
-audio features, **cross-attention** (context) and **statement-only** text
-embeddings, and the prosody × semantics **interaction** term.
+audio features, and **cross-attention** (context) and **statement-only** text
+embeddings.
 
 ## Scripts (pipeline order)
 
